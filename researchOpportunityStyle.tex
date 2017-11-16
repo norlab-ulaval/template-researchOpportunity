@@ -1,0 +1,84 @@
+%----------------------------------------
+% Page style
+
+% Set the page size
+\addtolength{\hoffset}{-1.0in} \addtolength{\voffset}{-0.75in}
+\setlength{\textwidth}{7in} \setlength{\textheight}{8.25in}
+\setlength{\headheight}{0.6in}
+\setlength{\headsep}{0.2in}
+
+\setlength{\footskip}{40pt}
+\setlength{\fboxsep}{12pt}
+
+% Set the paragraph skip
+\setlength{\parskip}{3pt}
+
+% Access to a counter for the number of pages
+\usepackage{lastpage}
+
+%----------------------------------------
+% Title style
+
+\newcommand{\makeCustomTitle}
+{
+\begin{center}
+\large{---~\projectLevel{}~---}
+\\
+\vspace{-5pt}
+\LARGE{\textbf{\projectTitle{}}}
+\\
+\vspace{5pt}
+\small{Supervised by \projectSupervisor{} \texttt{<\projectSupervisorEmail{}>}}
+\end{center}
+}
+
+%----------------------------------------
+% Section style
+\usepackage{sectsty}
+
+% Set the section labeling font
+\allsectionsfont{\textsf\bfseries}
+
+%----------------------------------------
+% Caption style
+\usepackage[font=small, labelfont=bf, skip=5pt]{caption}
+
+%----------------------------------------
+% header style
+\usepackage{fancyhdr}
+
+% Set the page style for the document
+\pagestyle{fancy}
+
+% Define the basic page style
+
+\fancyhf{}%
+
+\fancyhead[L]{\includegraphics[height=0.45in]{UL_N}}
+\fancyhead[C]{\raisebox{0.2in}{\textsc{Research Opportunity}}}
+\fancyhead[R]{\includegraphics[height=0.45in]{norlab_logo_dark}}
+\fancyfoot[L]{Last modification: \today}
+\fancyfoot[R]{\thepage/\pageref*{LastPage}}
+
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+
+%----------------------------------------
+% footnote style
+\usepackage{fnpos}
+% Fix the footnotes location
+\makeFNbottom \makeFNbelow
+
+% ---------------------------------------------------------------
+
+% PDF setup
+\hypersetup{%
+    pdftitle={\projectLevel: \projectTitle},
+    pdfauthor={\@author},
+    pdfkeywords={research, project, robotics, norlab, Northern Robotics Lab},
+    pdfsubject={},
+    pdfstartview={},
+    urlcolor=cyan,
+    linkcolor=red,
+}%

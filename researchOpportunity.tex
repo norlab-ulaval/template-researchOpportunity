@@ -10,6 +10,9 @@
 % Internship Project, Master's Project, Doctoral Project
 \newcommand{\projectLevel}{Master's Project}
 
+\newcommand{\projectSupervisor}{Prof. F. Pomerleau}
+\newcommand{\projectSupervisorEmail}{francois.pomerleau@ift.ulaval.ca}
+
 \author{Fran\c{c}ois Pomerleau \\
        Laval University\\
        1065, av. de la Médecine \\
@@ -28,99 +31,19 @@
 % Change to your specific file
 \addbibresource{./latexGoodPractices/exampleReferences.bib}
 
-%----------------------------------------
-% Page style
-
-% Set the page size
-\addtolength{\hoffset}{-1.0in} \addtolength{\voffset}{-0.75in}
-\setlength{\textwidth}{7in} \setlength{\textheight}{8.25in}
-\setlength{\headheight}{0.6in}
-\setlength{\headsep}{0.2in}
-
-\setlength{\footskip}{40pt}
-\setlength{\fboxsep}{12pt}
-
-% Set the paragraph skip
-\setlength{\parskip}{3pt}
-
-% Access to a counter for the number of pages
-\usepackage{lastpage}
-
-%----------------------------------------
-% Title style
-
-\newcommand{\makeCustomTitle}
-{
-\begin{center}
-\large{---~\projectLevel{}~---}
-\\
-\vspace{-5pt}
-\LARGE{\textbf{\projectTitle{}}}
-\\
-\vspace{5pt}
-\small{Supervised by Prof.~F.~Pomerleau \texttt{<francois.pomerleau@ift.ulaval.ca>}}
-\end{center}
-}
-
-%----------------------------------------
-% Section style
-\usepackage{sectsty}
-
-% Set the section labeling font
-\allsectionsfont{\textsf\bfseries}
-
-%----------------------------------------
-% Caption style
-\usepackage[font=small, labelfont=bf, skip=5pt]{caption}
-
-%----------------------------------------
-% header style
-\usepackage{fancyhdr}
-
-% Set the page style for the document
-\pagestyle{fancy}
-
-% Define the basic page style
-
-\fancyhf{}%
-
-\fancyhead[L]{\includegraphics[height=0.45in]{UL_N}}
-\fancyhead[C]{\raisebox{0.2in}{\textsc{Research Opportunity}}}
-\fancyhead[R]{\includegraphics[height=0.45in]{norlab_logo_dark}}
-\fancyfoot[L]{Last modification: \today}
-\fancyfoot[R]{\thepage/\pageref*{LastPage}}
-
-\renewcommand{\headrulewidth}{0.2pt}
-\renewcommand{\footrulewidth}{0.2pt}
-
-
-%----------------------------------------
-% footnote style
-\usepackage{fnpos}
-% Fix the footnotes location
-\makeFNbottom \makeFNbelow
-
 % ---------------------------------------------------------------
-
-% PDF setup
-\hypersetup{%
-    pdftitle={\projectLevel: \projectTitle},
-    pdfauthor={\@author},
-    pdfkeywords={research, project, robotics, norlab, Northern Robotics Lab},
-    pdfsubject={},
-    pdfstartview={},
-    urlcolor=cyan,
-    linkcolor=red,
-}%
-
+% Load style
+\input{researchOpportunityStyle.tex}
 % ---------------------------------------------------------------
 
 % Wrap text around a figure
 \usepackage{wrapfig}
 \setlength\intextsep{0pt}
+
 % Fill the template with text
 \usepackage{lipsum}
 
+%================================================================
 \begin{document}
 \makeCustomTitle
 
@@ -139,7 +62,6 @@ Replace the file \texttt{./figs/overview.pdf} with a photo or diagram that catch
 Limit the number of references to two \cite{Pomerleau2013,Pomerleau2014}.
 \lipsum[1-2]
 
-
 % ---------------------------------------------------------------
 \section*{Research Environment}
 
@@ -149,12 +71,6 @@ It currently enrolls \num{50000} students, from which around \num{9000} are at t
 Norlab is specialized in mobile and autonomous systems working in winter or difficult conditions. 
 We aim at investigating new challenges related to navigation algorithms to push the boundary of what is currently possible to achieve with a mobile robot in real-life conditions. 
 The current focus of the laboratory is on localization algorithms designed for laser sensors (lidar) and 3D reconstruction of the environment.
-
-
-
-
-
-
 
 % ---------------------------------------------------------------
 \printbibliography
