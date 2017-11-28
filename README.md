@@ -1,5 +1,6 @@
-# template-researchOpportunity
+# Latex Template for Research Opportunities
 Latex template for research project opportunities targeting interns, M.Sc., and Ph.D.
+Use this template to propose new projects in the lab.
 
 Examples of this template in use can be found [here](https://github.com/norlab-ulaval?utf8=%E2%9C%93&q=in%3Aname%20researchOpportunity%20NOT%20template-researchOpportunity&type=&language=tex).
 
