@@ -8,6 +8,7 @@ Examples of this template in use can be found [here](https://github.com/norlab-u
 1. Copy the content of this repository.
 1. Rename the file `researchOpportunity.tex` to `researchOpportunity-<yourProjectShortName>.tex`. This is your main document to fill.
 1. In `researchOpportunity-<yourProjectShortName>.tex`, fill the variables at the beginning of the file.
+1. If your not familiar with the lab good practices in latex, read the file [preamble.tex](https://github.com/norlab-ulaval/latexGoodPractices/blob/master/preamble.tex).
 1. In the core of the document, replace the commands `\lightlipsum[..]` by your text.
 1. Iterate with your supervisor for some feedbacks if needed.
 
