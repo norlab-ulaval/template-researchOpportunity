@@ -16,6 +16,9 @@ Examples of this template in use can be found [here](https://github.com/norlab-u
 # How to Modify
 __Warning:__ There is a submodule in this repository. 
 Try to keep is consistent with the lastest version of the repository [latexGoodPractices](https://github.com/norlab-ulaval/latexGoodPractices).
+```
+$ git clone --recurse-submodules <repo>
+```
 
 Don't hesitate to update through pull request.
 If you can save time to other, the all lab gets more efficient so we can do more research instead of formating text...
